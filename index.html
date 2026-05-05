@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Kingsinn</title>
+    <link rel="icon" href="./assets/title_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Loading Video Overlay -->
+    <div id="preloader">
+        <video autoplay muted loop playsinline id="loader-video">
+            <source src="./assets/Scene-1.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-bg z-3">
+        <div class="container py-2">
+            <img src="./assets/logoMod.png" alt="" class="kings-logo">
+            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button> -->
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <div class="nav-btns">
+                    <button class="nav-btn">Contact Us <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                    <button class="nav-btn">Location <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                </div>
+                <button class="btn text-white fs-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                        class="fa-solid fa-bars-staggered"></i></button>
+            </div>
+            <!-- </div> -->
+        </div>
+    </nav>
+    <div class="home-bg">
+        <div class="home-overlay"></div>
+        <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <img src="./assets/logoMod.png" alt="" class="kings-logo offcanvas-title">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav gap-0 gap-lg-3 mb-2 mb-lg-0">
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#info">Informations</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#tour">Tourist Places</a>
+                    </li>
+                </ul>
+                <div class="off-btns mt-3">
+                    <button class="nav-btn">Contact Us <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                    <button class="nav-btn">Location <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row align-items-center py-5 overflow-hidden">
+                <div class="col-12 col-lg-5 py-5 my-5 z-1" data-aos="fade-right">
+                    <p class="display-1 text-white">Welcome to Kingsinn</p>
+                    <p class="text-white fs-5">Comfortable and affordable stay in Nilakottai, just a short drive from
+                        Madurai.</p>
+                    <p class="text-white fs-5">
+                        Enjoy a peaceful environment with easy access to famous tourist places,
+                        temples, and city attractions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5" id="about">
+        <div class="row align-items-center justify-content-center py-5">
+            <div class="col-12 col-lg-6 mb-5 mb-lg-0 overflow-hidden" data-aos="fade-right">
+                <p class="heading-txt fw-bold display-6">About Us</p>
+                <p class="txt-color fs-6">Rendel House is a comfortable and affordable rental home located in
+                    Nilakottai,
+                    near Madurai. Designed for families, tourists, and travelers, our goal is to
+                    provide a peaceful and homely stay experience away from the busy city.
+                    Our property offers clean rooms, essential facilities, and a calm environment,
+                    making it perfect for short stays, weekend trips, and temple visits. <br> <br>
+                    With easy
+                    access to Madurai and nearby tourist attractions, guests can enjoy both
+                    convenience and relaxation. <br> <br>
+                    At Rendel House, we focus on comfort, safety, and friendly service to ensure
+                    every guest feels at home.
+                </p>
+            </div>
+            <div class="col-8 col-lg-6 position-relative">
+                <div class="position-absolute start-0 bottom-0 translate-middle-x z-2 about-sm-section">
+                    <img src="./assets/set-cottages-ocean-blue-sky_181624-44243.jpg" alt=""
+                        class="about-sm-section-img active">
+                    <img src="./assets/1.avif" alt="" class="about-sm-section-img">
+                </div>
+                <div class="about-bg">
+                    <img src="./assets/1.avif" alt="" class="about-img active">
+                    <img src="./assets/set-cottages-ocean-blue-sky_181624-44243.jpg" alt="" class="about-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-2 px-lg-5" id="gallery">
+        <p class="heading-txt text-center fw-bold display-6">Gallery</p>
+        <div class="row g-0 g-lg-3 py-5 align-items-center">
+            <div class="col-12 col-lg-3">
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./assets/g8.avif" alt="" class="left-gal-img1">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Dining Room</h4>
+                        <p>A welcoming space designed for memorable meals with family and friends.</p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="./assets/g7.avif" alt="" class="left-gal-img2">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Kitchen</h4>
+                        <p>A modern and functional kitchen designed to make cooking easy, efficient, and
+                            enjoyable every
+                            day.</p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./assets/g9.avif" alt="" class="left-gal-img3">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Decorative Foyer</h4>
+                        <p>A beautifully styled entrance that creates a warm and elegant first impression
+                            for every
+                            guest.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="./assets/g2.avif" alt="" class="center-gal-img1">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Bedroom</h4>
+                        <p>A peaceful and cozy retreat designed for relaxation, comfort, and a restful
+                            night's sleep.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="./assets/g1.avif" alt="" class="center-gal-img2">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Living Room</h4>
+                        <p>A comfortable and stylish space designed for relaxation, entertainment, and
+                            quality time with
+                            family and guests.</p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="./assets/g3.avif" alt="" class="center-gal-img3">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Home Office</h4>
+                        <p>A productive and well-organized workspace designed for focus, creativity, and
+                            efficient work
+                            from home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./assets/g5.avif" alt="" class="right-gal-img1">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Creative Workspace</h4>
+                        <p>An inspiring and dynamic space designed to boost creativity, innovation, and
+                            productivity in
+                            every project.</p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./assets/g4.avif" alt="" class="right-gal-img2">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Guest Bedroom</h4>
+                        <p>A comfortable and welcoming space designed to make guests feel relaxed, cozy,
+                            and at home.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="./assets/g6.avif" alt="" class="right-gal-img3">
+                    <div class="gallery-overlay">
+                        <h4 class="mb-4 mb-lg-2">Bathroom</h4>
+                        <p>A clean and refreshing space designed for comfort, relaxation, and everyday
+                            convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5" id="info" data-aos="fade-up">
+        <p class="heading-txt fw-bold display-6 text-center">Informations</p>
+        <div class="row g-0 g-lg-5 pt-5 justify-content-center">
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <p class="fw-bold">CHECK-IN & CHECK-OUT</p>
+
+                <div class="d-flex align-items-start gap-2 txt-color">
+                    <span><i class="bi bi-clock-history"></i></span>
+                    <span class="fw-bold small">
+                        Check-in: From 2:00 PM onwards <br>
+                        Check-out: Until 12:00 PM (Noon)
+                    </span>
+                </div>
+
+                <p class="mt-2 small txt-color">
+                    Early check-in and late check-out are subject to availability.
+                    Please contact our front desk in advance to make arrangements.
+                </p>
+
+                <div class="d-flex align-items-start gap-2 txt-color mt-2">
+                    <span><i class="bi bi-info-circle"></i></span>
+                    <span class="small">
+                        Valid ID proof is required at the time of check-in.
+                        We ensure a smooth and comfortable arrival experience for all our guests at Rendel House.
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-start gap-2 txt-color mt-2">
+                    <span><i class="bi bi-bell"></i></span>
+                    <span class="small">
+                        24/7 assistance available. Our team is always ready to help you with your stay.
+                    </span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <p class="fw-bold">HOUSE DETAILS</p>
+                <div class="d-flex flex-column gap-2">
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-house-fill"></i></span>
+                        <span class="fw-semibold small">
+                            This house includes 2 comfortable rooms and a functional kitchen,
+                            suitable for small families or individuals.
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-4">
+                        <i class="bi bi-pin-angle-fill"></i>
+                        <span class="fw-semibold small">Free WiFi</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-4">
+                        <i class="bi bi-pin-angle-fill"></i>
+                        <span class="fw-semibold small">AC Rooms</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-4">
+                        <i class="bi bi-pin-angle-fill"></i>
+                        <span class="fw-semibold small">24/7 Water Supply</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-4">
+                        <i class="bi bi-pin-angle-fill"></i>
+                        <span class="fw-semibold small">Car Parking</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-4">
+                        <i class="bi bi-pin-angle-fill"></i>
+                        <span class="fw-semibold small">Family Friendly</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <p class="fw-bold">CONTACT</p>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-geo-alt-fill"></i></span>
+                        <span class="fw-semibold small">
+                            Rendel House <br>
+                            No. 2, Club House Road, <br>
+                            Madurai, Tamil Nadu – 600002, India
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-telephone-fill"></i></span>
+                        <span class="fw-semibold small">+91 44663 13131</span>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-envelope-fill"></i></span>
+                        <span class="fw-semibold small">info@rendelhouse.com</span>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-globe"></i></span>
+                        <span class="fw-semibold small">www.rendelhouse.com</span>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-headset"></i></span>
+                        <span class="fw-semibold small">
+                            24/7 Guest Support Available <br>
+                            We’re here to assist you anytime during your stay.
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-2 txt-color">
+                        <span><i class="bi bi-share-fill"></i></span>
+                        <span class="fw-semibold small">
+                            Follow us:
+                            <i class="bi bi-facebook ms-1"></i>
+                            <i class="bi bi-instagram ms-1"></i>
+                            <i class="bi bi-twitter-x ms-1"></i>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 px-0" id="tour" data-aos="fade-up">
+        <div class="text-center">
+            <span class="heading-txt fw-bold display-6">Tourist Places</span><br>
+            <span class="txt-color fw-bold">Near by</span>
+        </div>
+        <div class="d-flex align-items-center position-relative">
+            <div class="tour-triggger-btn position-absolute top-50 start-0 translate-middle-y z-2 ms-2" id="prevBtn"><i
+                    class="bi bi-arrow-left-short fs-2"></i></div>
+            <div class="tour-triggger-btn position-absolute top-50 end-0 translate-middle-y z-2 me-2" id="nextBtn"><i
+                    class="bi bi-arrow-right-short fs-2"></i></div>
+            <div class="tour-wrapper">
+                <div class="tour-container">
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Kodaikanal Railway Junction </div>
+                        <a href="https://maps.app.goo.gl/pnrGgw7A26xwkF8x7?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Kodaikanal Railway Junction connects travelers to the scenic hill station of Kodaikanal in
+                            Tamil Nadu.
+                        </div>
+                        <img src="./assets/kodairailway.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Kodaikanal</div>
+                        <a href="https://maps.app.goo.gl/AmnTMBHog3t55obPA?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Kodaikanal is a hill town in the southern Indian state of Tamil Nadu.
+                        </div>
+                        <img src="./assets/kodai.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Meenakshi Amman Temple</div>
+                        <a href="https://maps.app.goo.gl/FTsf8snfyFtz69x3A?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Meenakshi Temple is a historic Hindu temple located on Madurai.
+                        </div>
+                        <img src="./assets/sri-menakshi-temple-madurai-tamil-nadu-india_163782-10301.jpg" alt=""
+                            class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Sirumalai</div>
+                        <a href="https://maps.app.goo.gl/umFZSSQcpeUDdE1y7?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Sirumalai is a peaceful hill range near Dindigul, known for its lush greenery and cool
+                            climate.
+                        </div>
+                        <img src="./assets/sirumalai.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Dindugal Mala Kottai</div>
+                        <a href="https://maps.app.goo.gl/3TxXgBrcKgThdTuf8?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Dindigul Malaikottai is a historic hilltop fort known for its strong architecture and
+                            panoramic views.
+                        </div>
+                        <img src="./assets/malakodai.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Batlagundu</div>
+                        <a href="https://maps.app.goo.gl/xQQN3aKeM6Zd9AZZA?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Batlagundu is a lively town in Dindigul district, serving as a key route to Kodaikanal.
+                        </div>
+                        <img src="./assets/batlagundu.jpg" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Gold Jewellers</div>
+                        <a href="https://maps.app.goo.gl/uKGJRa77m9XZM4za6?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Discover beautifully crafted gold jewellery designed for every occasion.
+                        </div>
+                        <img src="./assets/gold.jpg" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            SIPCOT</div>
+                        <a href="https://maps.app.goo.gl/QR7VERWuiLsjfs7W9?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            SIPCOT is a major industrial zone known for its manufacturing units and economic growth.
+                        </div>
+                        <img src="./assets/sitcot.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Annapatti</div>
+                        <a href="https://maps.app.goo.gl/kpwj3fhaVdgFerJ19?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            Annapatti is a serene village known for its rural beauty and peaceful surroundings.
+                        </div>
+                        <img src="./assets/annapatti.png" alt="" class="car-img">
+                    </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Vaigai River</div>
+                        <a href="https://maps.app.goo.gl/q1LFYW9jTqK2zs4W8?g_st=ac" target="_blank"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            The Vaigai River flows through Tamil Nadu, supporting life and culture across the region.
+                        </div>
+                        <img src="./assets/vaigairiver.jpg" alt="" class="car-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-bg">
+        <div class="container-fluid">
+            <div class="row justify-content-between px-5 pt-5">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <img src="./assets/logoMod.png" alt="" class="kings-logo">
+                    <p class="footer-desc fs-6">Comfortable and affordable rental house for your perfect stay.
+                        Enjoy peaceful environment and modern facilities.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="footer-icon"><i class="bi bi-facebook"></i></div>
+                        <div class="footer-icon"><i class="bi bi-instagram"></i></div>
+                        <div class="footer-icon"><i class="bi bi-twitter"></i></div>
+                        <div class="footer-icon"><i class="bi bi-whatsapp"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Informations</a></li>
+                        <li><a href="#">Tourist Places</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Facilities</h5>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-check"></i> Free WiFi</a></li>
+                        <li><a href="#"><i class="bi bi-check"></i> AC Rooms</a></li>
+                        <li><a href="#"><i class="bi bi-check"></i> 24/7 Water Supply</a></li>
+                        <li><a href="#"><i class="bi bi-check"></i> Car Parking</a></li>
+                        <li><a href="#"><i class="bi bi-check"></i> Family Friendly</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-geo-alt-fill"></i> Madurai, Tamil Nadu</a></li>
+                        <li><a href="#"><i class="bi bi-telephone-fill"></i> +91 98765 43210</a></li>
+                        <li><a href="#"><i class="bi bi-envelope-fill"></i> rendelhouse@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2 px-5 pb-4">
+            <span>© 2026 Rendel House. All rights reserved.</span>
+            <span>IT Service & Technology</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+:root {
+    --bg-color: #ecf0ed;
+    --heading-color: #0e2116;
+    --txt-color: #121312;
+    --txt-color2: #a1c69e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.heading-txt {
+    color: var(--heading-color);
+}
+
+.txt-color {
+    color: var(--txt-color);
+}
+
+/* Home */
+
+.home-bg {
+    background-image: url("./assets/logo_make_11_06_2023_74.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.home-overlay {
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Navbar */
+
+.navbar-bg {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.kings-logo {
+    width: auto;
+    height: 40px;
+}
+
+.navbar-bg.scrolled {
+    background-color: var(--heading-color);
+}
+
+.nav-item a {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-item:hover a {
+    color: var(--txt-color2);
+}
+
+.nav-btn {
+    background-color: rgba(128, 128, 128, 0.459);
+    border: 2px solid var(--txt-color2);
+    color: white;
+    font-size: 14px;
+    padding: 5px 5px 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+
+.off-btns {
+    display: none !important;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btns{
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-arrow {
+    background-color: var(--txt-color2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transform: rotate(-40deg);
+    transition: all 0.5s ease;
+}
+
+.nav-btn:hover .btn-arrow {
+    transform: rotate(0deg);
+    background-color: var(--txt-color);
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: var(--txt-color2);
+    color: black;
+}
+
+@media (max-width: 767px){
+    .off-btns{
+        display: flex !important;
+    }
+}
+
+@media (min-width: 768px){
+    .nav-btns{
+        display: flex;
+    }
+}
+
+/* Sidebar */
+
+.sidebar-bg {
+    background-color: #0e2116a4 !important;
+}
+
+/* About */
+
+.about-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(3deg);
+    transition: all 0.5s ease;
+}
+
+.about-img.active {
+    display: block;
+}
+
+.about-bg {
+    background-color: var(--heading-color);
+    width: 100%;
+    height: 100%;
+    transform: rotate(-2deg);
+}
+
+.about-sm-section {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--heading-color);
+    position: relative;
+}
+
+.about-sm-section:hover {
+    cursor: pointer;
+}
+
+.about-sm-section-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.about-sm-section-img.active {
+    display: block;
+}
+
+.about-sm-section:hover .about-sm-section-img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .about-sm-section {
+        width: 140px;
+        height: 140px;
+        border: 4px solid var(--heading-color);
+    }
+}
+
+@media (max-width: 425px) {
+    .about-sm-section {
+        width: 100px;
+        height: 100px;
+        border: 4px solid var(--heading-color);
+    }
+}
+
+@media (max-width: 375px) {
+    .about-sm-section {
+        width: 75px;
+        height: 75px;
+        border: 3px solid var(--heading-color);
+    }
+}
+
+
+
+/* Gallery */
+
+.left-gal-img1,
+.right-gal-img2 {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.left-gal-img2,
+.right-gal-img3 {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.left-gal-img3 {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.center-gal-img1,
+.center-gal-img2 {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.center-gal-img3 {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.right-gal-img1 {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.gallery-img-block {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left-gal-img1,
+.left-gal-img2,
+.left-gal-img3,
+.center-gal-img1,
+.center-gal-img2,
+.center-gal-img3,
+.right-gal-img1,
+.right-gal-img2,
+.right-gal-img3 {
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.left-gal-img1:hover,
+.left-gal-img2:hover,
+.left-gal-img3:hover,
+.center-gal-img1:hover,
+.center-gal-img2:hover,
+.center-gal-img3:hover,
+.right-gal-img1:hover,
+.right-gal-img2:hover,
+.right-gal-img3:hover {
+    transform: scale(1.03);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    transform: translateY(60%);
+    transition: 0.5s ease;
+}
+
+.gallery-img-block:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-img-block:hover .gallery-overlay p {
+    opacity: 1;
+}
+
+.gallery-overlay h4 {
+    font-weight: bold;
+}
+
+.gallery-overlay p {
+    opacity: 0;
+}
+
+/* Tourist Places */
+
+.tour-triggger-btn {
+    width: 48px;
+    height: 48px;
+    background-color: var(--txt-color2);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    position: absolute;
+}
+
+.tour-triggger-btn:hover {
+    background-color: #0e2116;
+    color: white;
+    cursor: pointer;
+}
+
+.tour-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.tour-container {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+    will-change: transform;
+}
+
+.tour-container.no-transition .tour-intro,
+.tour-container.no-transition .tour-badge,
+.tour-container.no-transition .tour-content,
+.tour-container.no-transition .tour-content img {
+    transition: none !important;
+}
+
+.tour-content {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    transform: scale(0.6);
+    opacity: 0.6;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.5s ease;
+}
+
+.tour-container .active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.tour-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+    filter: brightness(0.2);
+}
+
+.tour-content.active img {
+    filter: brightness(0.8);
+}
+
+.tour-content.active:hover img {
+    transform: scale(1.05);
+}
+
+.tour-badge {
+    background-color: var(--heading-color);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    opacity: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.5s ease;
+}
+
+.tour-intro {
+    opacity: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.tour-container .active .tour-badge,
+.tour-container .active .tour-intro {
+    opacity: 1;
+}
+
+.tour-content.active:hover .tour-badge {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .tour-content {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tour-content {
+        width: 320px;
+        height: 360px;
+    }
+
+    .tour-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-content {
+        width: 260px;
+        height: 300px;
+    }
+
+    .tour-container {
+        gap: 20px;
+    }
+}
+
+/* Footer */
+
+.footer-bg {
+    background-color: var(--heading-color);
+    width: 100%;
+    height: 100%;
+}
+
+footer h5 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+.footer-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 40px;
+    padding-top: 24px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+
+.footer-icon {
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--heading-color);
+    transition: 0.3s ease;
+    font-size: 16px;
+}
+
+.footer-icon:hover {
+    transform: translateY(-3px);
+}
+
+.footer-icon:nth-child(1):hover {
+    color: blue;
+}
+
+.footer-icon:nth-child(2):hover {
+    color: #e93468;
+}
+
+.footer-icon:nth-child(3):hover {
+    color: #009ded;
+}
+
+.footer-icon:nth-child(4):hover {
+    color: #24cc63;
+}
+
+/*  LOADING VIDEO */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    /* top, left, right, bottom = 0 */
+    width: 100%;
+    height: 100dvh;
+    /* better for mobile (dynamic viewport) */
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+/* Fade out animation */
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Main content */
+#main-content {
+    display: block !important;
+}
+
+/* Video */
+#loader-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #loader-video {
+        object-fit: cover;
+        /* keep full screen */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #loader-video {
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1025px) {
+    #loader-video {
+        object-fit: cover;
+    }
+}
