@@ -9,25 +9,29 @@ window.onload = function () {
   // Check if loader already shown in this session
   if (sessionStorage.getItem("loaderShown")) {
     preloader.style.display = "none";
-
-    // 🔓 Unlock scroll
     document.body.classList.remove("no-scroll");
     return;
   }
 
-  setTimeout(function () {
+  const video = document.getElementById("loader-video");
+
+  function hideLoader() {
     preloader.style.opacity = "0";
     preloader.style.visibility = "hidden";
-
     sessionStorage.setItem("loaderShown", "true");
 
     setTimeout(() => {
       preloader.style.display = "none";
-
-      // 🔓 Unlock scroll after loader gone
       document.body.classList.remove("no-scroll");
-    }, 1000);
-  }, 2300);
+    }, 800); // matches your CSS transition duration
+  }
+
+  // Hide when video ends
+  video.addEventListener("ended", hideLoader);
+
+  // Fallback: if video fails or takes too long, hide after 5s
+  video.addEventListener("error", hideLoader);
+  setTimeout(hideLoader, 2500);
 };
 
 window.addEventListener("scroll", () => {

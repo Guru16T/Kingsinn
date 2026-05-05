@@ -70,15 +70,6 @@ body.no-scroll {
     background-color: var(--heading-color);
 }
 
-.nav-item a {
-    color: white;
-    transition: 0.3s;
-}
-
-.nav-item:hover a {
-    color: var(--txt-color2);
-}
-
 .nav-btn {
     background-color: rgba(128, 128, 128, 0.459);
     border: 2px solid var(--txt-color2);
@@ -98,7 +89,7 @@ body.no-scroll {
     gap: 5px;
 }
 
-.nav-btns{
+.nav-btns {
     display: none;
     align-items: center;
     gap: 5px;
@@ -128,14 +119,14 @@ body.no-scroll {
     color: black;
 }
 
-@media (max-width: 767px){
-    .off-btns{
+@media (max-width: 767px) {
+    .off-btns {
         display: flex !important;
     }
 }
 
-@media (min-width: 768px){
-    .nav-btns{
+@media (min-width: 768px) {
+    .nav-btns {
         display: flex;
     }
 }
@@ -144,6 +135,22 @@ body.no-scroll {
 
 .sidebar-bg {
     background-color: #0e2116a4 !important;
+}
+
+.nav-item a {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-item:hover a {
+    color: var(--txt-color2);
+}
+
+#home,
+#gallery,
+#info,
+#tour {
+    scroll-margin-top: 150px;
 }
 
 /* About */
@@ -494,8 +501,19 @@ footer ul li a {
     transition: color 0.2s;
 }
 
+footer ul li{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
 footer ul li a:hover {
-    color: #fff;
+    color: var(--txt-color2);
+}
+
+footer ul li:hover {
+    color: var(--txt-color2);
 }
 
 .footer-brand {
@@ -534,23 +552,33 @@ footer ul li a:hover {
 }
 
 .footer-icon:hover {
+    cursor: pointer;
     transform: translateY(-3px);
 }
 
 .footer-icon:nth-child(1):hover {
-    color: blue;
+    background-color: #1877F2;
+    color: white;
 }
 
 .footer-icon:nth-child(2):hover {
-    color: #e93468;
+    background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+    color: white;
 }
 
 .footer-icon:nth-child(3):hover {
-    color: #009ded;
+    background-color: black;
+    color: white;
 }
 
 .footer-icon:nth-child(4):hover {
-    color: #24cc63;
+    background-color: #25D366;
+    color: white;
 }
 
 /*  LOADING VIDEO */
@@ -593,8 +621,8 @@ footer ul li a:hover {
 
 @media (max-width: 768px) {
     #loader-video {
-        object-fit: cover;
-        /* keep full screen */
+        object-fit: contain;
+        background-color: white;
     }
 }
 
