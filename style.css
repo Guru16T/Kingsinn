@@ -17,11 +17,6 @@ body {
     background-color: var(--bg-color) !important;
 }
 
-body.no-scroll {
-    overflow: hidden;
-    height: 100vh;
-}
-
 .heading-txt {
     color: var(--heading-color);
 }
@@ -63,7 +58,7 @@ body.no-scroll {
 
 .kings-logo {
     width: auto;
-    height: 40px;
+    height: 55px;
 }
 
 .navbar-bg.scrolled {
@@ -582,22 +577,27 @@ footer ul li:hover {
 
 /*  LOADING VIDEO */
 
-#preloader {
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
     position: fixed;
-    inset: 0;
-    /* top, left, right, bottom = 0 */
     width: 100%;
-    height: 100dvh;
-    /* better for mobile (dynamic viewport) */
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow: hidden;
-    transition:
-        opacity 0.8s ease,
-        visibility 0.8s ease;
+}
+
+#preloader {
+  position: fixed;
+  inset: 0; /* top, left, right, bottom = 0 */
+  width: 100%;
+  height: 100dvh; /* better for mobile (dynamic viewport) */
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  overflow: hidden;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
 }
 
 /* Fade out animation */

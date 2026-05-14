@@ -1,38 +1,31 @@
-// Loading page
-
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("preloader");
 
-  // 🔒 Lock scroll initially
+  // Lock scroll immediately
   document.body.classList.add("no-scroll");
 
-  // Check if loader already shown in this session
+  // If already shown in this session
   if (sessionStorage.getItem("loaderShown")) {
     preloader.style.display = "none";
     document.body.classList.remove("no-scroll");
     return;
   }
 
-  const video = document.getElementById("loader-video");
-
-  function hideLoader() {
+  // Show loader for 2.5 seconds
+  setTimeout(() => {
     preloader.style.opacity = "0";
     preloader.style.visibility = "hidden";
+
     sessionStorage.setItem("loaderShown", "true");
 
     setTimeout(() => {
       preloader.style.display = "none";
       document.body.classList.remove("no-scroll");
-    }, 800); // matches your CSS transition duration
-  }
+    }, 800);
+  }, 2500);
+});
 
-  // Hide when video ends
-  video.addEventListener("ended", hideLoader);
-
-  // Fallback: if video fails or takes too long, hide after 5s
-  video.addEventListener("error", hideLoader);
-  setTimeout(hideLoader, 2500);
-};
+// Navbar
 
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar-bg");
