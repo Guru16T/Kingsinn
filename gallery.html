@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Gallery</title>
+    <link rel="icon" href="./assets/title_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg gal-navbar-bg z-3">
+        <div class="container py-2">
+            <img src="./assets/logo.png" alt="" class="kings-logo">
+            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button> -->
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <div class="nav-btns">
+                    <a href="./#info" class="text-decoration-none">
+                        <button class="nav-btn">Contact Us <span class="btn-arrow"><i
+                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
+                    </a>
+                    <a href="https://maps.app.goo.gl/6DTCMq2Mq6b9sdUx8" target="_blank" class="text-decoration-none">
+                        <button class="nav-btn">Location <span class="btn-arrow"><i
+                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
+                    </a>
+                </div>
+                <button class="btn text-white fs-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                        class="fa-solid fa-bars-staggered"></i></button>
+            </div>
+            <!-- </div> -->
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <img src="./assets/logo.png" alt="" class="kings-logo offcanvas-title">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav gap-0 gap-lg-3 mb-2 mb-lg-0">
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <a class="nav-link fs-5" aria-current="page" href="./#home">Home</a>
+                </li>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <a class="nav-link fs-5" href="./#about">About</a>
+                </li>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <a class="nav-link fs-5" href="./#gallery">Gallery</a>
+                </li>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <a class="nav-link fs-5" href="./#info">Informations</a>
+                </li>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <a class="nav-link fs-5" href="./#tour">Tourist Places</a>
+                </li>
+            </ul>
+            <div class="off-btns mt-3">
+                <a href="#info" class="text-decoration-none">
+                    <button class="nav-btn" data-bs-dismiss="offcanvas">Contact Us <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                </a>
+
+                <a href="https://maps.app.goo.gl/6DTCMq2Mq6b9sdUx8" target="_blank" class="text-decoration-none">
+                    <button class="nav-btn" data-bs-dismiss="offcanvas">Location <span class="btn-arrow"><i
+                                class="bi bi-arrow-right-short fs-3"></i></span></button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="my-5">
+        <div class="text-center">
+            <p class="heading-txt fw-bold display-6">Our Gallery</p>
+            <p>Step into our rental house gallery and explore beautifully designed spaces crafted for comfort, style,
+                and convenience. <br>
+                From cozy interiors to modern amenities, every corner reflects the perfect place to feel at home.</p>
+        </div>
+        <ul class="nav nav-tabs custom-tabs border-0 justify-content-center gap-2" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="dinning-tab" data-bs-toggle="tab" data-bs-target="#dinning-tab-pane"
+                    type="button" role="tab" aria-controls="dinning-tab-pane" aria-selected="true">Dinning
+                    Room</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bedroom-tab" data-bs-toggle="tab" data-bs-target="#bedroom-tab-pane"
+                    type="button" role="tab" aria-controls="bedroom-tab-pane" aria-selected="false">Bed
+                    Room</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="workspace-tab" data-bs-toggle="tab" data-bs-target="#workspace-tab-pane"
+                    type="button" role="tab" aria-controls="workspace-tab-pane" aria-selected="false">Workspace</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kitchen-tab" data-bs-toggle="tab" data-bs-target="#kitchen-tab-pane"
+                    type="button" role="tab" aria-controls="kitchen-tab-pane" aria-selected="false">Kitchen</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="livingroom-tab" data-bs-toggle="tab" data-bs-target="#livingroom-tab-pane"
+                    type="button" role="tab" aria-controls="livingroom-tab-pane" aria-selected="false">Living
+                    Room</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="guestroom-tab" data-bs-toggle="tab" data-bs-target="#guestroom-tab-pane"
+                    type="button" role="tab" aria-controls="guestroom-tab-pane" aria-selected="false">Guest
+                    Room</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="foyer-tab" data-bs-toggle="tab" data-bs-target="#foyer-tab-pane"
+                    type="button" role="tab" aria-controls="foyer-tab-pane" aria-selected="false">Decorative
+                    Foyer</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="homeoffice-tab" data-bs-toggle="tab" data-bs-target="#homeoffice-tab-pane"
+                    type="button" role="tab" aria-controls="homeoffice-tab-pane" aria-selected="false">Home
+                    Office</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bathroom-tab" data-bs-toggle="tab" data-bs-target="#bathroom-tab-pane"
+                    type="button" role="tab" aria-controls="bathroom-tab-pane" aria-selected="false">Bathroom</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="dinning-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <!-- <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner rounded-4">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/g1.avif" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/g2.avif" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/g3.avif" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center justify-content-center mt-4">
+                                    <div data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                        class="thumb-item active" aria-current="true" aria-label="Slide 1">
+                                        <img src="./assets/g1.avif" alt="" class="carousel-thumb">
+                                    </div>
+                                    <div data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                        aria-label="Slide 2" class="thumb-item">
+                                        <img src="./assets/g2.avif" alt="" class="carousel-thumb">
+                                    </div>
+                                    <div data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                        aria-label="Slide 3" class="thumb-item">
+                                        <img src="./assets/g3.avif" alt="" class="carousel-thumb">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="bedroom-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="container py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="workspace-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="kitchen-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="livingroom-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="guestroom-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="foyer-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="homeoffice-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="bathroom-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                tabindex="0">
+                <div class="container-fluid py-5">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <img src="./assets/g8.avif" alt="" class="main-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g1.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g2.avif" alt="" class="gal-img">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <img src="./assets/g3.avif" alt="" class="gal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-bg">
+        <div class="container-fluid">
+            <div class="row justify-content-between px-5 pt-5">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <img src="./assets/logo.png" alt="" class="kings-logo">
+                    <p class="footer-desc fs-6">Comfortable and affordable rental house for your perfect stay.
+                        Enjoy peaceful environment and modern facilities.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="footer-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="footer-icon"><i class="bi bi-instagram"></i></div>
+                        <div class="footer-icon"><i class="bi bi-twitter-x"></i></div>
+                        <div class="footer-icon"><i class="bi bi-whatsapp"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#info">Informations</a></li>
+                        <li><a href="#tour">Tourist Places</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Facilities</h5>
+                    <ul>
+                        <li><i class="bi bi-check"></i> Free WiFi</li>
+                        <li><i class="bi bi-check"></i> AC Rooms</li>
+                        <li><i class="bi bi-check"></i> 24/7 Water Supply</li>
+                        <li><i class="bi bi-check"></i> Car Parking</li>
+                        <li><i class="bi bi-check"></i> Family Friendly</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li class="text-nowrap"><i class="bi bi-geo-alt-fill"></i> Madurai, Tamil Nadu</li>
+                        <li class="text-nowrap"><i class="bi bi-telephone-fill"></i> +91 98765 43210</li>
+                        <li class="text-nowrap"><i class="bi bi-envelope-fill"></i> rendelhouse@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2 px-5 pb-4">
+            <span>© 2026 Rendel House. All rights reserved.</span>
+            <span>IT Service & Technology</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="gallery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+    </script>
+</body>
+
+</html>
