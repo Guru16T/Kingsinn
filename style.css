@@ -680,6 +680,13 @@ body.no-scroll {
     }
 }
 
+/* .custom-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+} */
+
 .custom-tabs .nav-link {
     border: none;
     border-radius: 30px;
@@ -735,5 +742,13 @@ body.no-scroll {
     .carousel-thumb {
         width: 60px;
         height: 50px;
+    }
+
+    .custom-tabs .nav-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 140px;
+        text-align: center;
     }
 }
