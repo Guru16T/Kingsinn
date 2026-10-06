@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Kingsinn</title>
+    <title>Rendel House</title>
     <link rel="icon" href="./assets/title_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -57,7 +57,7 @@
     </nav>
     <div class="home-bg" id="home">
         <div class="home-overlay"></div>
-        <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight"
+        <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight" data-bs-scroll="false"
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <img src="./assets/logo.png" alt="" class="kings-logo offcanvas-title">
@@ -73,10 +73,16 @@
                         <a class="nav-link fs-5" href="#about">About</a>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
                         <a class="nav-link fs-5" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas">
                         <a class="nav-link fs-5" href="#info">Informations</a>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas">
+                        <a class="nav-link fs-5" href="#local-highlights">Discover Nilakottai</a>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas">
                         <a class="nav-link fs-5" href="#tour">Tourist Places</a>
@@ -95,18 +101,62 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row align-items-center overflow-hidden" style="height: 100vh;">
-                <div class="col-12 col-md-8 col-lg-5 z-1 mt-5" data-aos="fade-right">
-                    <p class="display-1 text-white">Welcome to Kingsinn</p>
-                    <p class="text-white fs-5">Comfortable and affordable stay in Nilakottai, just a short drive from
-                        Madurai.</p>
-                    <p class="text-white fs-5">
-                        Enjoy a peaceful environment with easy access to famous tourist places,
-                        temples, and city attractions.
-                    </p>
-                </div>
+        <div class="container home-hero-layout">
+            <div class="home-hero-copy" data-aos="fade-right">
+                    <p class="home-eyebrow"><span></span> YOUR PRIVATE STAY IN NILAKOTTAI</p>
+                    <h1 class="display-2 text-white fw-bold">Welcome to <span>Kingsinn</span></h1>
+                    <p class="text-white fs-5">Comfortable and affordable stay in Nilakottai, just a short drive from Madurai.</p>
+                    <p class="text-white fs-5 home-hero-description">Enjoy a peaceful environment with easy access to famous tourist places, temples, and city attractions.</p>
             </div>
+            <form class="home-booking-form" id="stayRequestForm" novalidate data-aos="fade-up" data-aos-delay="150">
+                <div class="booking-section-heading">
+                    <span class="booking-section-eyebrow">YOUR PRIVATE STAY</span>
+                </div>
+                <div class="booking-fields-layout">
+                    <div class="booking-date-grid">
+                        <div class="booking-field-group">
+                            <label class="booking-field-label" for="checkInTrigger"><i class="bi bi-calendar-event"></i> Check-in</label>
+                            <div class="booking-field-wrap">
+                            <input type="hidden" id="checkInDate" name="checkin">
+                            <button class="home-booking-field date-picker-trigger" id="checkInTrigger" type="button" aria-label="Select check-in date" aria-haspopup="dialog" aria-expanded="false">
+                                <span id="checkInDisplay">Choose a date</span><i class="bi bi-chevron-down"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="booking-field-group">
+                            <label class="booking-field-label" for="checkOutTrigger"><i class="bi bi-calendar-event"></i> Check-out</label>
+                            <div class="booking-field-wrap">
+                            <input type="hidden" id="checkOutDate" name="checkout">
+                            <button class="home-booking-field date-picker-trigger" id="checkOutTrigger" type="button" aria-label="Select check-out date" aria-haspopup="dialog" aria-expanded="false">
+                                <span id="checkOutDisplay">Choose a date</span><i class="bi bi-chevron-down"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-field-group">
+                        <label class="booking-field-label" for="guestCount"><i class="bi bi-people-fill"></i> People</label>
+                        <div class="booking-field-wrap">
+                            <input class="home-booking-field guest-count-input" type="text" id="guestCount" name="guests" value="1" inputmode="numeric" pattern="[0-9]+" autocomplete="off" aria-label="Number of people" placeholder="Enter number of people" required>
+                        </div>
+                    </div>
+                    <button class="home-booking-submit" type="submit">
+                        <i class="bi bi-whatsapp"></i><span>Check availability</span>
+                    </button>
+                    <div class="booking-form-error" id="bookingFormError" role="alert" aria-live="polite" hidden></div>
+                </div>
+                <div class="custom-calendar" id="stayCalendar" role="dialog" aria-label="Choose your stay date" hidden>
+                    <div class="calendar-header">
+                        <button type="button" id="calendarPrev" aria-label="Previous month"><i class="bi bi-chevron-left"></i></button>
+                        <h3 id="calendarMonth" aria-live="polite"></h3>
+                        <button type="button" id="calendarNext" aria-label="Next month"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays" aria-hidden="true">
+                        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="calendar-days" id="calendarDays"></div>
+                </div>
+            </form>
+            <p class="home-booking-hint">Your dates and group size will be added to a WhatsApp message for confirmation.</p>
         </div>
     </div>
     <div class="container py-5" id="about">
@@ -139,8 +189,25 @@
             </div>
         </div>
     </div>
+    <section class="facility-section py-5" id="facilities">
+        <div class="container">
+            <header class="facility-heading text-center">
+                <p class="facility-eyebrow">OUR SERVICES</p>
+                <h2 class="heading-txt fw-bold display-6 facility-title">House Facilities</h2>
+            </header>
+            <div class="row g-4 justify-content-center facility-list">
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="0"><div class="facility-item"><span class="facility-icon"><i class="bi bi-door-open"></i></span><h3>Two Rooms</h3></div></div>
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="100"><div class="facility-item"><span class="facility-icon"><i class="bi bi-egg-fried"></i></span><h3>Kitchen</h3></div></div>
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="200"><div class="facility-item"><span class="facility-icon"><i class="bi bi-snow"></i></span><h3>Air Conditioning</h3></div></div>
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="300"><div class="facility-item"><span class="facility-icon"><i class="bi bi-droplet"></i></span><h3>24/7 Water</h3></div></div>
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="400"><div class="facility-item"><span class="facility-icon"><i class="bi bi-car-front"></i></span><h3>Car Parking</h3></div></div>
+                <div class="col-6 col-md-4 col-xl-2" data-aos="fade-up" data-aos-delay="500"><div class="facility-item"><span class="facility-icon"><i class="bi bi-wifi"></i></span><h3>Free Wi-Fi</h3></div></div>
+            </div>
+        </div>
+    </section>
     <div class="container-fluid px-2 px-lg-5" id="gallery">
         <p class="heading-txt text-center fw-bold display-6">Gallery</p>
+        <p class="gallery-intro">Step into our rental house gallery and explore beautifully designed spaces crafted for comfort, style, and convenience. From cozy interiors to modern amenities, every corner reflects the perfect place to feel at home.</p>
         <div class="row g-0 g-lg-3 py-5 align-items-center">
             <div class="col-12 col-lg-3">
                 <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
@@ -250,21 +317,20 @@
 
                 <p class="mt-2 small txt-color">
                     Early check-in and late check-out are subject to availability.
-                    Please contact our front desk in advance to make arrangements.
+                    Please contact the host in advance to make arrangements.
                 </p>
 
                 <div class="d-flex align-items-start gap-2 txt-color mt-2">
                     <span><i class="bi bi-info-circle"></i></span>
                     <span class="small">
-                        Valid ID proof is required at the time of check-in.
-                        We ensure a smooth and comfortable arrival experience for all our guests at Rendel House.
+                        Please bring valid identification when checking in to Rendel House.
                     </span>
                 </div>
 
                 <div class="d-flex align-items-start gap-2 txt-color mt-2">
                     <span><i class="bi bi-bell"></i></span>
                     <span class="small">
-                        24/7 assistance available. Our team is always ready to help you with your stay.
+                        Contact the host if you need assistance during your stay.
                     </span>
                 </div>
             </div>
@@ -273,36 +339,33 @@
                 <div class="d-flex flex-column gap-2">
                     <div class="d-flex align-items-start gap-2">
                         <span><i class="bi bi-house-fill"></i></span>
-                        <span class="fw-semibold small">
-                            This house includes 2 comfortable rooms and a functional kitchen,
-                            suitable for small families or individuals.
-                        </span>
+                        <span class="fw-semibold small">A single private rental home</span>
                     </div>
-
-                    <div class="d-flex align-items-center gap-2 ms-4">
-                        <i class="bi bi-pin-angle-fill"></i>
-                        <span class="fw-semibold small">Free WiFi</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-door-open"></i></span>
+                        <span class="fw-semibold small">Two comfortable rooms</span>
                     </div>
-
-                    <div class="d-flex align-items-center gap-2 ms-4">
-                        <i class="bi bi-pin-angle-fill"></i>
-                        <span class="fw-semibold small">AC Rooms</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-egg-fried"></i></span>
+                        <span class="fw-semibold small">Functional kitchen</span>
                     </div>
-
-                    <div class="d-flex align-items-center gap-2 ms-4">
-                        <i class="bi bi-pin-angle-fill"></i>
-                        <span class="fw-semibold small">24/7 Water Supply</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-snow"></i></span>
+                        <span class="fw-semibold small">Air conditioning</span>
                     </div>
-
-                    <div class="d-flex align-items-center gap-2 ms-4">
-                        <i class="bi bi-pin-angle-fill"></i>
-                        <span class="fw-semibold small">Car Parking</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-droplet"></i></span>
+                        <span class="fw-semibold small">24/7 water supply</span>
                     </div>
-
-                    <div class="d-flex align-items-center gap-2 ms-4">
-                        <i class="bi bi-pin-angle-fill"></i>
-                        <span class="fw-semibold small">Family Friendly</span>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-wifi"></i></span>
+                        <span class="fw-semibold small">Free Wi-Fi</span>
                     </div>
+                    <div class="d-flex align-items-start gap-2">
+                        <span><i class="bi bi-car-front"></i></span>
+                        <span class="fw-semibold small">Car parking</span>
+                    </div>
+                    <p class="small txt-color mb-0">Suitable for small families or individual travelers.</p>
                 </div>
             </div>
             <div class="col-12 col-lg-4 mb-4 mb-lg-0">
@@ -337,8 +400,7 @@
                     <div class="d-flex align-items-start gap-2 txt-color">
                         <span><i class="bi bi-headset"></i></span>
                         <span class="fw-semibold small">
-                            24/7 Guest Support Available <br>
-                            We’re here to assist you anytime during your stay.
+                            Contact the host if you need assistance during your stay.
                         </span>
                     </div>
 
@@ -356,10 +418,56 @@
             </div>
         </div>
     </div>
+    <section class="container py-5" id="local-highlights" data-aos="fade-up">
+        <div class="text-center mb-4">
+            <p class="heading-txt fw-bold display-6 mb-2">Discover Nilakottai</p>
+            <p class="txt-color mx-auto local-highlights-lead">A lively town with a strong agricultural trade, local crafts and everyday services close to Rendel House.</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="local-highlight-card h-100">
+                    <span class="local-highlight-icon"><i class="bi bi-flower1"></i></span>
+                    <h3>Agriculture &amp; flower trade</h3>
+                    <p>Nilakottai is known for its agricultural trade, with local markets handling jasmine, vegetables and grapes.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="local-highlight-card h-100">
+                    <span class="local-highlight-icon"><i class="bi bi-gem"></i></span>
+                    <h3>Local crafts &amp; shopping</h3>
+                    <p>Explore local shops for handcrafted brassware and gold jewellery, along with the town’s everyday shopping streets.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="local-highlight-card h-100">
+                    <span class="local-highlight-icon"><i class="bi bi-building"></i></span>
+                    <h3>Colleges &amp; civic services</h3>
+                    <p>Nearby institutions include the Government Arts College for Women and Maragatham Arts and Science College. The town also has a district court and several hospitals.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="local-highlight-card h-100">
+                    <span class="local-highlight-icon"><i class="bi bi-shop"></i></span>
+                    <h3>Markets &amp; community</h3>
+                    <p>Visit the local vegetable market and town shops, with churches and mosques serving the community.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="local-highlight-card h-100">
+                    <span class="local-highlight-icon"><i class="bi bi-signpost-2"></i></span>
+                    <h3>Getting here</h3>
+                    <p>Kodaikanal Road Railway Station and Madurai Airport are regional travel connections. Ask the host for current routes and distances.</p>
+                </article>
+            </div>
+        </div>
+        <div class="local-highlights-note mt-3">
+            <i class="bi bi-info-circle me-2"></i>For current police, fire and ambulance contact details, please ask your host.
+        </div>
+    </section>
     <div class="container-fluid py-5 px-0" id="tour" data-aos="fade-up">
         <div class="text-center">
             <span class="heading-txt fw-bold display-6">Tourist Places</span><br>
-            <span class="txt-color fw-bold">Near by</span>
+            <span class="txt-color fw-bold">Places to explore around Nilakottai</span>
         </div>
         <div class="d-flex align-items-center position-relative">
             <div class="tour-triggger-btn position-absolute top-50 start-0 translate-middle-y z-2 ms-2" id="prevBtn"><i
@@ -371,15 +479,14 @@
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
-                            Kodaikanal Railway Junction </div>
+                            Kodaikanal Road Railway Station </div>
                         <a href="https://maps.app.goo.gl/pnrGgw7A26xwkF8x7?g_st=ac" target="_blank"
                             class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
                             <i class="bi bi-compass-fill"></i>
                             Get Direction
                         </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
-                            Kodaikanal Railway Junction connects travelers to the scenic hill station of Kodaikanal in
-                            Tamil Nadu.
+                            A nearby rail connection for travelers heading toward Kodaikanal and the surrounding region.
                         </div>
                         <img src="./assets/kodairailway.png" alt="" class="car-img">
                     </div>
@@ -512,6 +619,20 @@
                         </div>
                         <img src="./assets/vaigairiver.jpg" alt="" class="car-img">
                     </div>
+                    <div class="tour-content">
+                        <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
+                                class="bi bi-geo-alt-fill"></i>
+                            Vaigai Dam</div>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Vaigai+Dam+Tamil+Nadu" target="_blank" rel="noopener noreferrer"
+                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
+                            <i class="bi bi-compass-fill"></i>
+                            Get Direction
+                        </a>
+                        <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
+                            A scenic reservoir and dam on the Vaigai River, popular for a relaxed day visit.
+                        </div>
+                        <img src="./assets/vaigai.png" alt="Vaigai Dam" class="car-img">
+                    </div>
                 </div>
             </div>
         </div>
@@ -535,13 +656,15 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#info">Informations</a></li>
+                        <li><a href="#local-highlights">Discover Nilakottai</a></li>
                         <li><a href="#tour">Tourist Places</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                    <h5>Facilities</h5>
+                    <h5>House Facilities</h5>
                     <ul>
                         <li><i class="bi bi-check"></i> Free WiFi</li>
                         <li><i class="bi bi-check"></i> AC Rooms</li>
