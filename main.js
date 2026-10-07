@@ -343,13 +343,13 @@ if (stayRequestForm) {
         }
 
         const message = [
-            "Hello Rendel House, I would like to request a stay at Kingsinn.",
+            "Hello Kings Inn, I would like to request a stay.",
             `Check-in: ${showDate(checkInDate.value)}`,
             `Check-out: ${showDate(checkOutDate.value)}`,
             `People: ${guestCount}`,
             "Please confirm availability."
         ].join("\n");
 
-        window.open(`https://wa.me/919345550463?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+        window.open(`https://wa.me/918095877711?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     });
 }
