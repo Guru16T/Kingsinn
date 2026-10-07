@@ -663,6 +663,15 @@ body.no-scroll {
     width: 100%;
 }
 
+body.offcanvas-open {
+    overflow: hidden !important;
+}
+
+html.offcanvas-open {
+    overflow: hidden !important;
+    overscroll-behavior: none;
+}
+
 #preloader {
     position: fixed;
     inset: 0;

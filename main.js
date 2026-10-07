@@ -27,6 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Navbar
 
+const sidebar = document.getElementById("offcanvasRight");
+
+if (sidebar) {
+    sidebar.addEventListener("show.bs.offcanvas", () => {
+        document.body.classList.add("offcanvas-open");
+        document.documentElement.classList.add("offcanvas-open");
+    });
+
+    sidebar.addEventListener("hidden.bs.offcanvas", () => {
+        document.body.classList.remove("offcanvas-open");
+        document.documentElement.classList.remove("offcanvas-open");
+    });
+}
+
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar-bg");
 
