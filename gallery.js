@@ -1,6 +1,16 @@
 const carousel = document.querySelector('#carouselExampleCaptions');
 const thumbs = document.querySelectorAll('.thumb-item');
 const sidebar = document.getElementById('offcanvasRight');
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+    const updateBackToTop = () => {
+        backToTop.classList.toggle('is-visible', window.scrollY > 50);
+    };
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    window.addEventListener('resize', updateBackToTop);
+    updateBackToTop();
+}
 
 if (sidebar) {
     sidebar.addEventListener('show.bs.offcanvas', () => {

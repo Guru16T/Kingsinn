@@ -51,6 +51,44 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const homeBackToTop = document.querySelector(".back-to-top");
+
+if (homeBackToTop) {
+    const updateHomeBackToTop = () => {
+        homeBackToTop.classList.toggle("is-visible", window.scrollY > 50);
+    };
+    window.addEventListener("scroll", updateHomeBackToTop, { passive: true });
+    window.addEventListener("resize", updateHomeBackToTop);
+    updateHomeBackToTop();
+}
+
+const homeSection = document.querySelector(".home-bg");
+let homeParallaxFrame = null;
+
+if (homeSection) {
+    window.addEventListener("scroll", () => {
+        if (homeParallaxFrame !== null) return;
+        homeParallaxFrame = window.requestAnimationFrame(() => {
+            homeSection.style.setProperty("--home-parallax-y", `${window.scrollY * 0.16}px`);
+            homeParallaxFrame = null;
+        });
+    }, { passive: true });
+}
+
+const staySection = document.querySelector(".stay-section");
+let stayParallaxFrame = null;
+
+if (staySection) {
+    window.addEventListener("scroll", () => {
+        if (stayParallaxFrame !== null) return;
+        stayParallaxFrame = window.requestAnimationFrame(() => {
+            const sectionTop = staySection.getBoundingClientRect().top + window.scrollY;
+            staySection.style.setProperty("--stay-parallax-y", `${(window.scrollY - sectionTop) * 0.16}px`);
+            stayParallaxFrame = null;
+        });
+    }, { passive: true });
+}
+
 const container = document.querySelector(".tour-container");
 const wrapper = container.parentElement;
 
