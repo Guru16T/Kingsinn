@@ -110,6 +110,7 @@ html {
     height: auto;
     position: relative;
     min-height: 100vh;
+    overflow-x: clip;
 }
 
 .home-bg::before {
@@ -974,6 +975,8 @@ html.offcanvas-open {
 .home-hero-feature {
     position: relative;
     isolation: isolate;
+    min-width: 0;
+    max-width: 100%;
     grid-column: 2;
     grid-row: 1;
     justify-self: end;
@@ -1134,7 +1137,7 @@ html.offcanvas-open {
     position: absolute;
     z-index: 3;
     right: 12%;
-    bottom: 0;
+    bottom: -5px;
     left: 12%;
     display: flex;
     align-items: center;
@@ -1523,6 +1526,7 @@ html.offcanvas-open {
         width: min(100%, 420px);
         height: 220px;
         margin-top: 0;
+        flex: 0 1 auto;
     }
 
     .home-hero-orbit { right: 50%; width: min(72vw, 270px); }
@@ -1532,7 +1536,7 @@ html.offcanvas-open {
     .home-hero-arch { top: 3%; right: 15%; width: 70%; height: 88%; padding: 6px; }
     .home-hero-arch::after { inset: 6px; }
     .home-hero-stamp { top: 19%; right: calc(15% - 30px); width: 60px; height: 60px; }
-    .home-hero-location { right: 15%; bottom: 0; left: 15%; font-size: 0.48rem; }
+    .home-hero-location { right: 15%; bottom: -5px; left: 15%; font-size: 0.48rem; }
     .home-hero-location small { font-size: 0.42rem; }
 
     .home-hero-copy h1 {
