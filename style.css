@@ -105,7 +105,7 @@ html {
 
 .home-bg {
     --home-parallax-y: 0px;
-    background: url("./assets/logo_make_11_06_2023_74.jpg") center calc(50% + var(--home-parallax-y)) / cover no-repeat;
+    background: url("./assets/house3.jpg") center calc(50% + var(--home-parallax-y)) / cover no-repeat;
     width: 100%;
     height: auto;
     position: relative;
@@ -340,6 +340,9 @@ html {
 }
 
 @media (max-width: 425px) {
+    .home-bg {
+        background-position: -150px 0;
+    }
     .about-sm-section {
         width: 100px;
         height: 100px;
@@ -1682,7 +1685,7 @@ html.offcanvas-open {
 .local-highlights-section {
     position: relative;
     overflow: hidden;
-    padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+    padding: clamp(4.5rem, 2vw, 7.5rem) 0;
     color: var(--heading-color);
 }
 
@@ -1797,7 +1800,7 @@ html.offcanvas-open {
 
 .info-section {
     position: relative;
-    padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+    padding: clamp(4.5rem, 2vw, 7.5rem) 0 2rem;
 }
 
 .info-heading {
@@ -2298,7 +2301,7 @@ html.offcanvas-open {
     position: absolute;
     z-index: 0;
     inset: -18% 0;
-    background: url("./assets/g2.avif") center / cover no-repeat;
+    background: url("./assets/13.avif") center / cover no-repeat;
     content: "";
     transform: translate3d(0, var(--stay-parallax-y), 0);
     will-change: transform;
