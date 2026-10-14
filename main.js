@@ -457,3 +457,27 @@ if (stayRequestForm) {
         window.open(`https://wa.me/918095877711?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     });
 }
+
+const welcomeToast = document.getElementById('welcomeToast');
+
+if (welcomeToast) {
+    const closeWelcomeToast = welcomeToast.querySelector('.welcome-toast-close');
+    let toastDismissTimer;
+    let toastRemovalTimer;
+
+    const dismissWelcomeToast = () => {
+        welcomeToast.classList.remove('is-visible');
+        window.clearTimeout(toastRemovalTimer);
+        toastRemovalTimer = window.setTimeout(() => welcomeToast.remove(), 320);
+    };
+
+    window.setTimeout(() => {
+        welcomeToast.classList.add('is-visible');
+        toastDismissTimer = window.setTimeout(dismissWelcomeToast, 5000);
+    }, 3400);
+
+    closeWelcomeToast?.addEventListener('click', () => {
+        window.clearTimeout(toastDismissTimer);
+        dismissWelcomeToast();
+    });
+}
