@@ -27,22 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Navbar
 
-const sidebar = document.getElementById("offcanvasRight");
-
-if (sidebar) {
-    sidebar.addEventListener("show.bs.offcanvas", () => {
-        document.body.classList.add("offcanvas-open");
-        document.documentElement.classList.add("offcanvas-open");
-    });
-
-    sidebar.addEventListener("hidden.bs.offcanvas", () => {
-        document.body.classList.remove("offcanvas-open");
-        document.documentElement.classList.remove("offcanvas-open");
-    });
-}
-
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar-bg");
+    if (!navbar) return;
 
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
@@ -50,6 +37,37 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("scrolled");
     }
 });
+
+const navigationLinks = Array.from(document.querySelectorAll("#mainNavigation .nav-link"));
+const navigationSections = navigationLinks
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+function updateActiveNavigation() {
+    if (!navigationLinks.length || !navigationSections.length) return;
+
+    const activationLine = 150;
+    let activeSection = navigationSections[0];
+
+    navigationSections.forEach(section => {
+        if (section.getBoundingClientRect().top <= activationLine) activeSection = section;
+    });
+
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        activeSection = navigationSections[navigationSections.length - 1];
+    }
+
+    navigationLinks.forEach(link => {
+        const isActive = link.getAttribute("href") === `#${activeSection.id}`;
+        link.classList.toggle("active", isActive);
+        if (isActive) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+    });
+}
+
+window.addEventListener("scroll", updateActiveNavigation, { passive: true });
+window.addEventListener("resize", updateActiveNavigation);
+updateActiveNavigation();
 
 const homeBackToTop = document.querySelector(".back-to-top");
 
@@ -101,6 +119,35 @@ container.insertBefore(lastClone, items[0]);
 
 const allItems = Array.from(container.querySelectorAll(".tour-content"));
 const total = allItems.length;
+
+allItems.forEach((card) => {
+    const placeName = card.querySelector(".tour-badge")?.textContent.trim();
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", `Get directions from Kings Inn to ${placeName}`);
+});
+
+function openTourDirections(card) {
+    const placeName = card.querySelector(".tour-badge")?.textContent.trim();
+    if (!placeName) return;
+
+    const origin = "10.155674,77.855051";
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(placeName)}`;
+    window.open(directionsUrl, "_blank", "noopener,noreferrer");
+}
+
+container.addEventListener("click", (event) => {
+    const card = event.target.closest(".tour-content");
+    if (card) openTourDirections(card);
+});
+
+container.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const card = event.target.closest(".tour-content");
+    if (!card) return;
+    event.preventDefault();
+    openTourDirections(card);
+});
 
 let current = 1;
 let isTransitioning = false;
@@ -164,6 +211,11 @@ document.getElementById("prevBtn").onclick = tourPrev;
 
 updateActive();
 slideTo(current, false);
+
+window.setInterval(() => {
+    const activeCardHovered = allItems.some(card => card.classList.contains("active") && card.matches(":hover"));
+    if (!activeCardHovered) tourNext();
+}, 4000);
 
 const smallImages = document.querySelectorAll(".about-sm-section-img");
 const bigImages = document.querySelectorAll(".about-img");

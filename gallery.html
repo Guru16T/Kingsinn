@@ -21,92 +21,55 @@
 </head>
 
 <body id="top">
-    <nav class="navbar navbar-expand-lg gal-navbar-bg fixed-top z-3">
+    <nav class="navbar navbar-expand-xl navbar-bg gal-navbar-bg z-3">
         <div class="container py-2">
-            <img src="./assets/logo.png" alt="" class="kings-logo">
-            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            <a class="navbar-brand m-0" href="./#home" aria-label="Kings Inn home">
+                <img src="./assets/logo.png" alt="Kings Inn" class="kings-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#galleryNavigation" aria-controls="galleryNavigation" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-            <div class="d-flex align-items-center gap-3 ms-auto">
-                <div class="nav-btns">
-                    <a href="./#info" class="text-decoration-none">
-                        <button class="nav-btn">Contact Us <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-                    <a href="https://www.google.com/maps/search/?api=1&amp;query=King%27s+Inn%2C+Plot+No+23%2C+Maga+City%2C+Nilakottai+624208%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                        <button class="nav-btn">Location <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-                </div>
-                <button class="btn text-white fs-4" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
-                        class="fa-solid fa-bars-staggered"></i></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="galleryNavigation">
+                <ul class="navbar-nav ms-auto align-items-xl-center">
+                    <li class="nav-item"><a class="nav-link" href="./#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#rooms-stays">Rooms &amp; Stays</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#tour">Tourist Places</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./gallery.html" aria-current="page">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#facilities">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#info">Information</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./#local-highlights">Discover Nilakottai</a></li>
+                </ul>
+                <a href="./#info" class="nav-btn nav-contact-link">Contact Us <span class="btn-arrow"><i class="bi bi-arrow-right-short fs-3"></i></span></a>
             </div>
-            <!-- </div> -->
         </div>
     </nav>
-    <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight" data-bs-scroll="false"
-        aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <img src="./assets/logo.png" alt="" class="kings-logo offcanvas-title">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav gap-0 gap-lg-3 mb-2 mb-lg-0">
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" aria-current="page" href="./#home">Home</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#about">About</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#tour">Tourist Places</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#facilities">Facilities</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#rooms-stays">Rooms &amp; Stays</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#gallery">Gallery</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#info">Informations</a>
-                </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-5" href="./#local-highlights">Discover Nilakottai</a>
-                </li>
-            </ul>
-            <div class="off-btns mt-3">
-                <a href="./#info" class="text-decoration-none">
-                    <button class="nav-btn" data-bs-dismiss="offcanvas">Contact Us <span class="btn-arrow"><i
-                                class="bi bi-arrow-right-short fs-3"></i></span></button>
-                </a>
-
-                <a href="https://www.google.com/maps/search/?api=1&amp;query=King%27s+Inn%2C+Plot+No+23%2C+Maga+City%2C+Nilakottai+624208%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                    <button class="nav-btn" data-bs-dismiss="offcanvas">Location <span class="btn-arrow"><i
-                                class="bi bi-arrow-right-short fs-3"></i></span></button>
-                </a>
+    <section class="gallery-page">
+        <header class="gallery-heading">
+            <div class="gallery-heading-copy">
+                <p class="gallery-heading-kicker"><span></span> THE KINGS INN COLLECTION</p>
+                <h1>Our <em>Gallery</em></h1>
+                <p class="gallery-heading-intro">Explore the rooms, details, and welcoming spaces that make Kings Inn a comfortable home base in Nilakottai.</p>
             </div>
-        </div>
-    </div>
-    <section class="mt-5 py-5">
-        <div class="d-flex align-items-center justify-content-center flex-column">
-            <p class="heading-txt fw-bold display-6">Our Gallery</p>
-            <p class="desc1">Step into our rental house gallery and explore beautifully designed spaces crafted for comfort, style,
-                and convenience.
-                From cozy interiors to modern amenities, every corner reflects the perfect place to feel at home.</p>
-        </div>
+            <div class="gallery-heading-note" aria-label="Gallery location">
+                <span class="gallery-heading-index">01 <i></i> 15</span>
+                <strong>Rooms &amp; moments</strong>
+                <span><i class="bi bi-geo-alt" aria-hidden="true"></i> NILAKOTTAI, TAMIL NADU</span>
+            </div>
+        </header>
         <ul class="nav nav-tabs align-items-center justify-content-center gap-2 custom-tabs border-0" id="myTab"
             role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link" id="standard-room-tab" data-bs-toggle="tab" data-bs-target="#standard-room-tab-pane" type="button" role="tab" aria-controls="standard-room-tab-pane" aria-selected="false">Standard Room</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="family-room-tab" data-bs-toggle="tab" data-bs-target="#family-room-tab-pane" type="button" role="tab" aria-controls="family-room-tab-pane" aria-selected="false">Family Room</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="super-deluxe-tab" data-bs-toggle="tab" data-bs-target="#super-deluxe-tab-pane" type="button" role="tab" aria-controls="super-deluxe-tab-pane" aria-selected="false">Super Deluxe</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="suite-room-tab" data-bs-toggle="tab" data-bs-target="#suite-room-tab-pane" type="button" role="tab" aria-controls="suite-room-tab-pane" aria-selected="false">Suite Room</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="meeting-room-tab" data-bs-toggle="tab" data-bs-target="#meeting-room-tab-pane" type="button" role="tab" aria-controls="meeting-room-tab-pane" aria-selected="false">Meeting Room</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="business-center-tab" data-bs-toggle="tab" data-bs-target="#business-center-tab-pane" type="button" role="tab" aria-controls="business-center-tab-pane" aria-selected="false">Business Center</button></li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="dinning-tab" data-bs-toggle="tab" data-bs-target="#dinning-tab-pane"
-                    type="button" role="tab" aria-controls="dinning-tab-pane" aria-selected="true">Dinning
+                    type="button" role="tab" aria-controls="dinning-tab-pane" aria-selected="true">Dining
                     Room</button>
             </li>
             <li class="nav-item" role="presentation">
@@ -158,15 +121,15 @@
                         </div>
                         <div class="col-12 col-lg-8">
                             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner rounded-4">
+                <div class="carousel-inner rounded-4">
                                     <div class="carousel-item active">
-                                        <img src="./assets/g1.avif" class="d-block w-100" alt="...">
+                        <img src="./assets/g1.avif" class="d-block w-100" alt="Dining Room">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/g2.avif" class="d-block w-100" alt="...">
+                        <img src="./assets/g2.avif" class="d-block w-100" alt="Dining Room">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/g3.avif" class="d-block w-100" alt="...">
+                        <img src="./assets/g3.avif" class="d-block w-100" alt="Dining Room">
                                     </div>
                                 </div>
                                 <div class="d-flex gap-2 align-items-center justify-content-center mt-4">
@@ -188,6 +151,12 @@
                     </div>
                 </div>
             </div>
+            <div class="tab-pane fade" id="standard-room-tab-pane" role="tabpanel" aria-labelledby="standard-room-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Standard Room</h3><p class="desc">A comfortable classic for a calm, relaxing stay.</p></div><img src="./assets/7.avif" alt="Standard Room at Kings Inn" class="main-img"></div></div>
+            <div class="tab-pane fade" id="family-room-tab-pane" role="tabpanel" aria-labelledby="family-room-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Family Room</h3><p class="desc">A welcoming room with space to enjoy time together.</p></div><img src="./assets/13.avif" alt="Family Room at Kings Inn" class="main-img"></div></div>
+            <div class="tab-pane fade" id="super-deluxe-tab-pane" role="tabpanel" aria-labelledby="super-deluxe-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Super Deluxe</h3><p class="desc">Extra comfort and a little more room to unwind.</p></div><img src="./assets/15.avif" alt="Super Deluxe room at Kings Inn" class="main-img"></div></div>
+            <div class="tab-pane fade" id="suite-room-tab-pane" role="tabpanel" aria-labelledby="suite-room-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Suite Room</h3><p class="desc">A spacious retreat made for settling in.</p></div><img src="./assets/abo1.jpg" alt="Suite Room at Kings Inn" class="main-img"></div></div>
+            <div class="tab-pane fade" id="meeting-room-tab-pane" role="tabpanel" aria-labelledby="meeting-room-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Meeting Room</h3><p class="desc">A dedicated setting for focused conversations.</p></div><img src="./assets/about2.jpg" alt="Meeting Room at Kings Inn" class="main-img"></div></div>
+            <div class="tab-pane fade" id="business-center-tab-pane" role="tabpanel" aria-labelledby="business-center-tab" tabindex="0"><div class="container py-5"><div class="d-flex align-items-center justify-content-center flex-column"><h3>Business Center</h3><p class="desc">A convenient space to stay connected and get work done.</p></div><img src="./assets/modern-balcony-with-comfortable-furniture-scenic-view_23-2151983236.jpg" alt="Business Center at Kings Inn" class="main-img"></div></div>
             <div class="tab-pane fade" id="bedroom-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <div class="container py-5">
                     <div class="row g-3">
@@ -405,11 +374,11 @@
                     <ul>
                         <li><a href="./#home">Home</a></li>
                         <li><a href="./#about">About</a></li>
-                        <li><a href="./#tour">Tourist Places</a></li>
-                        <li><a href="./#facilities">Facilities</a></li>
                         <li><a href="./#rooms-stays">Rooms &amp; Stays</a></li>
-                        <li><a href="./#gallery">Gallery</a></li>
-                        <li><a href="./#info">Informations</a></li>
+                        <li><a href="./#tour">Tourist Places</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./#facilities">Facilities</a></li>
+                        <li><a href="./#info">Information</a></li>
                         <li><a href="./#local-highlights">Discover Nilakottai</a></li>
                     </ul>
                 </div>
@@ -419,7 +388,7 @@
                         <li><i class="bi bi-check"></i> Free WiFi</li>
                         <li><i class="bi bi-check"></i> AC Rooms</li>
                         <li><i class="bi bi-check"></i> 24/7 Water Supply</li>
-                        <li><i class="bi bi-check"></i> Hot Water</li>
+                        <li><i class="bi bi-check"></i> Power Backup</li>
                         <li><i class="bi bi-check"></i> Car Parking</li>
                         <li><i class="bi bi-check"></i> Family Friendly</li>
                         <li><i class="bi bi-check"></i> LCD Screen</li>
@@ -431,9 +400,9 @@
                 <div class="col-12 col-md-5 col-lg-2 mb-4 mb-lg-0">
                     <h5>Contact</h5>
                     <ul>
-                        <li><i class="bi bi-geo-alt-fill"></i> Kings Inn<br>Plot No. 23, Maga City,<br>Nilakottai 624208,<br>Dindigul District,<br>Tamil Nadu, India</li>
+                        <li><i class="bi bi-geo-alt-fill"></i> Kings Inn<br>Plot No. 23, Maga City,<br>Nilakottai - 624208,<br>Dindigul District,<br>Tamil Nadu, India</li>
                         <li><i class="bi bi-telephone-fill"></i> <a href="tel:+918095877744">+91 80958 77744</a></li>
-                        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:infokingsinn@gmail.co">infokingsinn@gmail.co</a></li>
+                        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:infokingsinn@gmail.co">infokingsinn@gmail.com</a></li>
                         <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/918095877711" target="_blank" rel="noopener noreferrer">+91 80958 77711</a></li>
                     </ul>
                 </div>

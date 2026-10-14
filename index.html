@@ -28,83 +28,42 @@
             <source src="./assets/Kings-inn.mp4" type="video/mp4" />
         </video>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-bg z-3">
+    <nav class="navbar navbar-expand-xl navbar-bg z-3">
         <div class="container py-2">
-            <img src="./assets/logo.png" alt="" class="kings-logo">
-            <!-- <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            <a class="navbar-brand m-0" href="#home" aria-label="Kings Inn home">
+                <img src="./assets/logo.png" alt="Kings Inn" class="kings-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-            <div class="d-flex align-items-center gap-3 ms-auto">
-                <div class="nav-btns">
-                    <a href="#info" class="text-decoration-none">
-                        <button class="nav-btn">Contact Us <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-                    <a href="https://www.google.com/maps/search/?api=1&amp;query=King%27s+Inn%2C+Plot+No+23%2C+Maga+City%2C+Nilakottai+624208%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                        <button class="nav-btn">Location <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-                </div>
-                <button class="btn text-white fs-4" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
-                        class="fa-solid fa-bars-staggered"></i></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto align-items-xl-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rooms-stays">Rooms &amp; Stays</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tour">Tourist Places</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#info">Information</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#local-highlights">Discover Nilakottai</a></li>
+                </ul>
+                <a href="tel:+914543293029" class="nav-btn nav-contact-link">Contact Us <span class="btn-arrow"><i class="bi bi-arrow-right-short fs-3"></i></span></a>
             </div>
-            <!-- </div> -->
         </div>
     </nav>
     <div class="home-bg" id="home">
         <div class="home-overlay"></div>
-        <div class="offcanvas offcanvas-end sidebar-bg" tabindex="-1" id="offcanvasRight" data-bs-scroll="false"
-            aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <img src="./assets/logo.png" alt="" class="kings-logo offcanvas-title">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav gap-0 gap-lg-3 mb-2 mb-lg-0">
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#about">About</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#tour">Tourist Places</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#facilities">Facilities</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#rooms-stays">Rooms &amp; Stays</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#info">Informations</a>
-                    </li>
-                    <li class="nav-item" data-bs-dismiss="offcanvas">
-                        <a class="nav-link fs-5" href="#local-highlights">Discover Nilakottai</a>
-                    </li>
-                </ul>
-                <div class="off-btns mt-3">
-                    <a href="#info" class="text-decoration-none">
-                        <button class="nav-btn" data-bs-dismiss="offcanvas">Contact Us <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-
-                    <a href="https://www.google.com/maps/search/?api=1&amp;query=King%27s+Inn%2C+Plot+No+23%2C+Maga+City%2C+Nilakottai+624208%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                        <button class="nav-btn" data-bs-dismiss="offcanvas">Location <span class="btn-arrow"><i
-                                    class="bi bi-arrow-right-short fs-3"></i></span></button>
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="container home-hero-layout">
+            <div class="home-brand-mark" aria-label="Kings Inn">
+                <span class="home-brand-rope home-brand-rope-left" aria-hidden="true"></span>
+                <span class="home-brand-rope home-brand-rope-right" aria-hidden="true"></span>
+                <span class="home-brand-rope-knot" aria-hidden="true"></span>
+                <span class="home-brand-heading">WELCOME TO</span>
+                <img src="./assets/logo.png" alt="Kings Inn">
+                <span class="home-brand-caption">YOUR STAY IN NILAKOTTAI</span>
+            </div>
             <div class="home-hero-copy" data-aos="fade-right">
                     <p class="home-eyebrow"><span></span> YOUR PRIVATE STAY IN NILAKOTTAI</p>
                     <h1 class="display-2 text-white fw-bold">Welcome to <span>Kingsinn</span></h1>
@@ -117,13 +76,10 @@
                     <span class="home-hero-orbit-ring home-hero-orbit-ring--middle"></span>
                     <span class="home-hero-orbit-ring home-hero-orbit-ring--inner"></span>
                 </div>
-                <div class="home-hero-index" aria-hidden="true"><strong>01</strong><span>THE STAY</span></div>
+                <div class="home-hero-index" aria-hidden="true"></div>
                 <figure class="home-hero-arch">
                     <img src="./assets/15.avif" alt="Comfortable guest room at Kings Inn">
                 </figure>
-                <div class="home-hero-stamp" aria-hidden="true">
-                    <img src="./assets/logo.png" alt="King's Inn">
-                </div>
                 <div class="home-hero-location" aria-hidden="true">
                     <i class="bi bi-geo-alt"></i>
                     <span>NILAKOTTAI<br><small>NEAR MADURAI</small></span>
@@ -184,18 +140,32 @@
         <div class="row align-items-center justify-content-center py-5">
             <div class="col-12 col-lg-6 mb-5 mb-lg-0 overflow-hidden" data-aos="fade-right">
                 <p class="heading-txt fw-bold display-6">About Us</p>
-                <p class="txt-color fs-6">Kings Inn is a comfortable and affordable stay located in
-                    Nilakottai,
-                    near Madurai. Designed for families, tourists, and travelers, our goal is to
-                    provide a peaceful and homely stay experience away from the busy city.
-                    Our property offers clean rooms, essential facilities, and a calm environment,
-                    making it perfect for short stays, weekend trips, and temple visits. <br> <br>
-                    With easy
-                    access to Madurai and nearby tourist attractions, guests can enjoy both
-                    convenience and relaxation. <br> <br>
-                    At Kings Inn, we focus on comfort, safety, and friendly service to ensure
-                    every guest feels at home.
-                </p>
+
+                <div class="about-content">
+                    <p class="txt-color fs-6">
+                        Kings Inn is a place to stay in Nilakottai, Dindigul district,
+                        Tamil Nadu. We welcome families, business travellers, and guests
+                        visiting the area for personal or work-related trips. Our property
+                        offers air-conditioned rooms and essential facilities for a
+                        comfortable stay, whether you are here for a night or planning
+                        a longer visit.
+                    </p>
+
+                    <p class="txt-color fs-6">
+                        Located in Maga City, Nilakottai, Kings Inn provides a convenient
+                        base for guests travelling around the region. Madurai Airport is
+                        approximately 54 km away, and our location makes it practical for
+                        guests arriving from different parts of Tamil Nadu and beyond.
+                    </p>
+
+                    <p class="txt-color fs-6">
+                        From checking in to settling into your room, we aim to keep things
+                        simple and comfortable. Whether you are travelling alone, with
+                        colleagues, or with family, Kings Inn offers a convenient place
+                        to rest during your visit to Nilakottai.
+                    </p>
+                </div>
+
             </div>
             <div class="col-8 col-lg-6 position-relative">
                 <div class="position-absolute start-0 bottom-0 translate-middle-x z-2 about-sm-section">
@@ -210,6 +180,30 @@
             </div>
         </div>
     </div>
+
+    <section class="stay-section" id="rooms-stays" aria-labelledby="stay-title">
+        <div class="container">
+            <div class="stay-heading">
+                <div>
+                    <p class="stay-eyebrow">FIND YOUR KIND OF STAY</p>
+                    <h2 class="heading-txt fw-bold display-6" id="stay-title">Rooms &amp; Stays</h2>
+                    <p class="stay-intro">Choose the room that suits your visit. All room categories are air-conditioned.</p>
+                </div>
+                <a class="stay-enquire-link" href="https://wa.me/918095877711?text=Hello%20Kings%20Inn%2C%20please%20share%20room%20availability%20and%20rates." target="_blank" rel="noopener noreferrer">Check availability <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <div class="row g-3 g-xl-4 stay-room-grid">
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card" style="--room-card-image: url('./assets/7.avif')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-door-open"></i></span><p class="stay-room-type">A COMFORTABLE CLASSIC</p><h3>Standard Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card stay-room-card-featured" style="--room-card-image: url('./assets/13.avif')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-people"></i></span><p class="stay-room-type">ROOM TO BE TOGETHER</p><h3>Family Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card" style="--room-card-image: url('./assets/15.avif')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-stars"></i></span><p class="stay-room-type">A LITTLE MORE COMFORT</p><h3>Super Deluxe</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card" style="--room-card-image: url('./assets/abo1.jpg')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-house-heart"></i></span><p class="stay-room-type">SPACE TO SETTLE IN</p><h3>Suite Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card" style="--room-card-image: url('./assets/about2.jpg')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-easel"></i></span><p class="stay-room-type">MEET &amp; COLLABORATE</p><h3>Meeting Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card" style="--room-card-image: url('./assets/modern-balcony-with-comfortable-furniture-scenic-view_23-2151983236.jpg')"><div class="stay-room-copy"><span class="stay-room-icon"><i class="bi bi-briefcase"></i></span><p class="stay-room-type">WORK WHILE YOU STAY</p><h3>Business Center</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></div></article></div>
+            </div>
+            <div class="stay-bottom-row">
+                <div class="stay-duration"><span class="stay-duration-icon"><i class="bi bi-calendar2-check"></i></span><div><strong>Stay your way</strong><span>Daily and monthly stays available</span></div></div>
+            </div>
+        </div>
+    </section>
 
         <div class="container-fluid px-0" id="tour" data-aos="fade-up">
         <div class="text-center">
@@ -227,25 +221,15 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Kodaikanal Road Railway Station </div>
-                        <a href="https://maps.app.goo.gl/pnrGgw7A26xwkF8x7?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             A nearby rail connection for travelers heading toward Kodaikanal and the surrounding region.
                         </div>
-                        <img src="./assets/station.jpg" alt="" class="car-img">
+                        <img src="./assets/krrs.jpg" alt="" class="car-img">
                     </div>
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Kodaikanal</div>
-                        <a href="https://maps.app.goo.gl/AmnTMBHog3t55obPA?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Kodaikanal is a hill town in the southern Indian state of Tamil Nadu.
                         </div>
@@ -255,11 +239,6 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Meenakshi Amman Temple</div>
-                        <a href="https://maps.app.goo.gl/FTsf8snfyFtz69x3A?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Meenakshi Temple is a historic Hindu temple located on Madurai.
                         </div>
@@ -270,11 +249,6 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Sirumalai</div>
-                        <a href="https://maps.app.goo.gl/umFZSSQcpeUDdE1y7?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Sirumalai is a peaceful hill range near Dindigul, known for its lush greenery and cool
                             climate.
@@ -285,11 +259,6 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Dindugal Mala Kottai</div>
-                        <a href="https://maps.app.goo.gl/3TxXgBrcKgThdTuf8?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Dindigul Malaikottai is a historic hilltop fort known for its strong architecture and
                             panoramic views.
@@ -300,25 +269,15 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Batlagundu</div>
-                        <a href="https://maps.app.goo.gl/xQQN3aKeM6Zd9AZZA?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Batlagundu is a lively town in Dindigul district, serving as a key route to Kodaikanal.
                         </div>
-                        <img src="./assets/batlagundu.jpg" alt="" class="car-img">
+                        <img src="./assets/batla.jpg" alt="" class="car-img">
                     </div>
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Gold Jewellers</div>
-                        <a href="https://maps.app.goo.gl/uKGJRa77m9XZM4za6?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             Discover beautifully crafted gold jewellery designed for every occasion.
                         </div>
@@ -328,109 +287,46 @@
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             SIPCOT</div>
-                        <a href="https://maps.app.goo.gl/QR7VERWuiLsjfs7W9?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             SIPCOT is a major industrial zone known for its manufacturing units and economic growth.
                         </div>
-                        <img src="./assets/sitcot.png" alt="" class="car-img">
+                        <img src="./assets/sipcot.jpg" alt="" class="car-img">
                     </div>
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
-                            Annapatti</div>
-                        <a href="https://maps.app.goo.gl/kpwj3fhaVdgFerJ19?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
+                            Anaipatti</div>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
-                            Annapatti is a serene village known for its rural beauty and peaceful surroundings.
+                            Anaipatti is a serene village known for its rural beauty and peaceful surroundings.
                         </div>
-                        <img src="./assets/annapatti.png" alt="" class="car-img">
+                        <img src="./assets/anaipatti.jpg" alt="" class="car-img">
                     </div>
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Vaigai River</div>
-                        <a href="https://maps.app.goo.gl/q1LFYW9jTqK2zs4W8?g_st=ac" target="_blank"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             The Vaigai River flows through Tamil Nadu, supporting life and culture across the region.
                         </div>
-                        <img src="./assets/vaigai_river.jpg" alt="" class="car-img">
+                        <img src="./assets/vaigai_ori.jpg" alt="" class="car-img">
                     </div>
                     <div class="tour-content">
                         <div class="position-absolute start-0 top-0 z-3 tour-badge m-2"><i
                                 class="bi bi-geo-alt-fill"></i>
                             Vaigai Dam</div>
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Vaigai+Dam+Tamil+Nadu" target="_blank" rel="noopener noreferrer"
-                            class="position-absolute end-0 bottom-0 z-3 tour-badge m-2">
-                            <i class="bi bi-compass-fill"></i>
-                            Get Direction
-                        </a>
                         <div class="position-absolute start-50 bottom-0 translate-middle text-center tour-intro z-3">
                             A scenic reservoir and dam on the Vaigai River, popular for a relaxed day visit.
                         </div>
-                        <img src="./assets/dam.jpg" alt="Vaigai Dam" class="car-img">
+                        <img src="./assets/vaigai_dam.jpg" alt="Vaigai Dam" class="car-img">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <section class="facility-section py-5" id="facilities">
-        <div class="container facility-layout">
-            <header class="facility-heading">
-                <p class="facility-eyebrow">COMFORT &amp; CONVENIENCE</p>
-                <h2 class="heading-txt facility-title">Facilities &amp; Services</h2>
-                <p class="facility-intro">Thoughtful comforts and attentive services make every stay at King’s Inn feel effortless.</p>
-            </header>
-            <div class="facility-list">
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-snow"></i><h3>Air Conditioning</h3><p>Relax in cool comfort in every room.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-droplet"></i><h3>24/7 Water</h3><p>Reliable water access throughout your stay.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-droplet-half"></i><h3>Hot Water</h3><p>Hot water for a refreshing start to your day.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-car-front"></i><h3>Car Parking</h3><p>Convenient on-site parking for guests.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-wifi"></i><h3>Free Wi-Fi</h3><p>Stay connected in rooms and common areas.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-tv"></i><h3>LCD Screen</h3><p>Enjoy television and broadcasting channels.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-basket"></i><h3>Same-Day Laundry</h3><p>Professional laundry service is available.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-map"></i><h3>Travel Desk</h3><p>Get help planning local trips and visits.</p></article>
-                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-shield-check"></i><h3>Guest Security</h3><p>A safe, welcoming stay for every guest.</p></article>
-            </div>
-        </div>
-    </section>
-    <section class="stay-section" id="rooms-stays" aria-labelledby="stay-title">
-        <div class="container">
-            <div class="stay-heading">
-                <div>
-                    <p class="stay-eyebrow">FIND YOUR KIND OF STAY</p>
-                    <h2 class="heading-txt fw-bold display-6" id="stay-title">Rooms &amp; Stays</h2>
-                    <p class="stay-intro">Choose the room that suits your visit. All room categories are air-conditioned.</p>
-                </div>
-                <a class="stay-enquire-link" href="https://wa.me/918095877711?text=Hello%20Kings%20Inn%2C%20please%20share%20room%20availability%20and%20rates." target="_blank" rel="noopener noreferrer">Check availability <i class="bi bi-arrow-up-right"></i></a>
-            </div>
-            <div class="row g-3 g-xl-4 stay-room-grid">
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card"><span class="stay-room-number">01</span><span class="stay-room-icon"><i class="bi bi-door-open"></i></span><p class="stay-room-type">A COMFORTABLE CLASSIC</p><h3>Standard Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card stay-room-card-featured"><span class="stay-room-number">02</span><span class="stay-room-icon"><i class="bi bi-people"></i></span><p class="stay-room-type">ROOM TO BE TOGETHER</p><h3>Family Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card"><span class="stay-room-number">03</span><span class="stay-room-icon"><i class="bi bi-stars"></i></span><p class="stay-room-type">A LITTLE MORE COMFORT</p><h3>Super Deluxe</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card"><span class="stay-room-number">04</span><span class="stay-room-icon"><i class="bi bi-house-heart"></i></span><p class="stay-room-type">SPACE TO SETTLE IN</p><h3>Suite Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card"><span class="stay-room-number">05</span><span class="stay-room-icon"><i class="bi bi-easel"></i></span><p class="stay-room-type">MEET &amp; COLLABORATE</p><h3>Meeting Room</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-                <div class="col-12 col-sm-6 col-lg-4"><article class="stay-room-card"><span class="stay-room-number">06</span><span class="stay-room-icon"><i class="bi bi-briefcase"></i></span><p class="stay-room-type">WORK WHILE YOU STAY</p><h3>Business Center</h3><span class="stay-room-feature"><i class="bi bi-snow"></i> Air-conditioned</span></article></div>
-            </div>
-            <div class="stay-bottom-row">
-                <div class="stay-duration"><span class="stay-duration-icon"><i class="bi bi-calendar2-check"></i></span><div><strong>Stay your way</strong><span>Daily and monthly stays available</span></div></div>
-            </div>
-        </div>
-    </section>
     <div class="container-fluid px-2 px-lg-5" id="gallery">
         <p class="heading-txt text-center fw-bold display-6">Gallery</p>
-        <p class="gallery-intro">Step into our rental house gallery and explore beautifully designed spaces crafted for comfort, style, and convenience. From cozy interiors to modern amenities, every corner reflects the perfect place to feel at home.</p>
+        <p class="gallery-intro">Take a look at Kings Inn through our gallery. Explore our rooms, interiors, and available facilities to get a better idea of the place before your visit. Our gallery gives you a closer look at the spaces where you can relax and enjoy your stay.</p>
         <div class="row g-0 g-lg-3 py-5 align-items-center">
             <div class="col-12 col-lg-3">
                 <div class="gallery-img-block" data-aos="zoom-in" data-aos-delay="200">
@@ -524,11 +420,33 @@
         </a>
         </div>
     </div>
+
+        <section class="facility-section py-5" id="facilities">
+        <div class="container facility-layout">
+            <header class="facility-heading">
+                <p class="facility-eyebrow">COMFORT &amp; CONVENIENCE</p>
+                <h2 class="heading-txt facility-title">Facilities &amp; Services</h2>
+                <p class="facility-intro">Thoughtful comforts and attentive services make every stay at King’s Inn feel effortless.</p>
+            </header>
+            <div class="facility-list">
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-snow"></i><h3>Air Conditioning</h3><p>Relax in cool comfort in every room.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-droplet"></i><h3>24/7 Water</h3><p>Enjoy 24/7 water access and hot water throughout your stay.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-lightning-charge"></i><h3>24/7 Power Backup</h3><p>Enjoy uninterrupted comfort with reliable power backup.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-car-front"></i><h3>Car Parking</h3><p>Convenient on-site parking for guests.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-wifi"></i><h3>Free Wi-Fi</h3><p>Stay connected in rooms and common areas.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-tv"></i><h3>LCD Screen</h3><p>Enjoy television and broadcasting channels.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-basket"></i><h3>Same-Day Laundry</h3><p>Professional laundry service is available.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-map"></i><h3>Travel Desk</h3><p>Get help planning local trips and visits.</p></article>
+                <article class="facility-item" data-aos="fade-up"><i class="facility-icon bi bi-shield-check"></i><h3>Guest Security</h3><p>A safe, welcoming stay for every guest.</p></article>
+            </div>
+        </div>
+    </section>
+
     <section class="info-section" id="info" aria-labelledby="info-title">
         <div class="container">
             <header class="info-heading" data-aos="fade-up">
                 <p class="info-eyebrow">A THOUGHTFUL STAY, FROM ARRIVAL TO DEPARTURE</p>
-                <h2 class="heading-txt" id="info-title">Your stay, <span>well taken care of.</span></h2>
+                <h2 class="heading-txt" id="info-title">Information <span>for your stay.</span></h2>
                 <p>Everything you need to plan your visit and feel at home at Kings Inn.</p>
             </header>
 
@@ -537,8 +455,8 @@
                     <div class="info-card-topline"><span>01</span><i class="bi bi-clock-history" aria-hidden="true"></i></div>
                     <p class="info-card-kicker">ARRIVAL &amp; DEPARTURE</p>
                     <h3>Make yourself at home.</h3>
-                    <div class="info-time-row"><span>Check-in</span><strong>From 2:00 PM</strong></div>
-                    <div class="info-time-row"><span>Check-out</span><strong>By 12:00 PM</strong></div>
+                    <div class="info-time-row"><span>Check-in</span><strong>From 12:00 PM</strong></div>
+                    <div class="info-time-row"><span>Check-out</span><strong>By 11:00 AM</strong></div>
                     <p class="info-card-note">Early arrival and late departure are subject to availability. Please contact the host in advance.</p>
                     <div class="info-small-note"><i class="bi bi-person-vcard" aria-hidden="true"></i><span>Please bring valid identification for check-in.</span></div>
                 </article>
@@ -563,15 +481,53 @@
                     <div class="info-card-topline"><span>03</span><i class="bi bi-compass" aria-hidden="true"></i></div>
                     <p class="info-card-kicker">CONTACT &amp; LOCATION</p>
                     <h3>We’re here to help.</h3>
-                    <address class="info-address">Kings Inn<br>Plot No. 23, Maga City<br>Nilakottai 624208, Dindigul District<br>Tamil Nadu, India</address>
+                    <address class="info-address">Kings Inn<br>Plot No. 23, Maga City<br>Nilakottai - 624208, Dindigul District<br>Tamil Nadu, India</address>
                     <div class="info-contact-links">
-                        <a href="tel:+914543293029"><i class="bi bi-telephone" aria-hidden="true"></i> 04543 293029</a>
-                        <a href="tel:+918095877744"><i class="bi bi-phone" aria-hidden="true"></i> +91 80958 77744</a>
+                        <a href="tel:+914543293029" class="tel-no"><i class="bi bi-telephone" aria-hidden="true"></i> +914543 293029</a>
+                        <a href="tel:+918095877744"><i class="bi bi-phone" aria-hidden="true"></i> +91 80958 77744 | +91 80958 77711</a>
                         <a href="https://wa.me/918095877711" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i> +91 80958 77711</a>
-                        <a href="mailto:infokingsinn@gmail.co"><i class="bi bi-envelope" aria-hidden="true"></i> infokingsinn@gmail.co</a>
+                        <a href="mailto:infokingsinn@gmail.co"><i class="bi bi-envelope" aria-hidden="true"></i> infokingsinn@gmail.com</a>
                     </div>
-                    <a class="info-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=King%27s+Inn%2C+Plot+No+23%2C+Maga+City%2C+Nilakottai+624208%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer">Get directions <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <a class="info-map-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=10.15567%2C77.85569" target="_blank" rel="noopener noreferrer">Get directions <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                 </article>
+            </div>
+
+            <div class="info-map-showcase" data-aos="fade-up" aria-label="Map showing the location of Kings Inn">
+                <div class="info-map-heading">
+                    <div>
+                        <p class="info-eyebrow">A WELCOME IN THE HEART OF NILAKOTTAI</p>
+                        <h3>Find your way to Kings Inn.</h3>
+                    </div>
+                    <p class="info-map-intro">A convenient location in Nilakottai, ready to welcome you.</p>
+                </div>
+                <div class="info-map-layout">
+                    <div class="info-map-frame">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d933.2468027003533!2d77.85505126955209!3d10.155673999372372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDA5JzIwLjQiTiA3N8KwNTEnMjAuNSJF!5e1!3m2!1sen!2sin!4v1791881995533!5m2!1sen!2sin"
+                            title="Map to Kings Inn in Nilakottai"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <aside class="info-map-details">
+                        <p class="info-map-detail-kicker"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> KINGS INN · NILAKOTTAI</p>
+                        <h4>Your stay starts here.</h4>
+                        <p class="info-map-detail-address">Plot No. 23, Maga City<br>Nilakottai 624208, Tamil Nadu</p>
+                        <div class="info-map-coordinate-copy"><i class="bi bi-crosshair2" aria-hidden="true"></i><span>10.155674° N &nbsp; 77.855051° E</span></div>
+                        <div class="info-map-help">
+                            <p>Need help finding us on your way?</p>
+                            <a href="tel:+914543293029"><i class="bi bi-telephone" aria-hidden="true"></i> Call +914543 293029</a>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <div class="footer-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="footer-icon"><i class="bi bi-instagram"></i></div>
+                            <div class="footer-icon"><i class="bi bi-twitter-x"></i></div>
+                            <div class="footer-icon"><i class="bi bi-whatsapp"></i></div>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     </section>
@@ -582,7 +538,7 @@
                     <img src="./assets/vaigai.png" alt="Madurai temple district and river at sunset" loading="lazy">
                     <figcaption>
                         <span class="local-guide-kicker">THE KING’S INN LOCAL GUIDE</span>
-                        <h2>A sense<br>of place.</h2>
+                        <h2>Discover<br>Nilakottai</h2>
                         <p>Flower markets, local traditions and the character of Tamil Nadu—discover what makes this region memorable.</p>
                         <span class="local-guide-caption">BEYOND NILAKOTTAI <i class="bi bi-arrow-down-right" aria-hidden="true"></i></span>
                     </figcaption>
@@ -621,7 +577,7 @@
                         <article class="local-guide-stop local-guide-airport">
                             <span class="local-guide-icon"><i class="bi bi-airplane" aria-hidden="true"></i></span>
                             <div><h3>Madurai Airport</h3><p>Approximately 54 km by road. Route and travel time can vary.</p>
-                                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Madurai+Airport&amp;destination=Plot+No.+23%2C+Maga+City%2C+Nilakottai%2C+Dindigul%2C+Tamil+Nadu" target="_blank" rel="noopener noreferrer">Plan your route <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=10.15567%2C77.85569" target="_blank" rel="noopener noreferrer">Plan your route <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </article>
                     </div>
@@ -634,7 +590,7 @@
             <div class="row justify-content-between px-0 px-md-4 px-lg-5 pt-3 pt-md-5 pt-lg-5">
                 <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                     <img src="./assets/logo.png" alt="" class="kings-logo">
-                    <p class="footer-desc fs-6">Comfortable and affordable rental house for your perfect stay.
+                    <p class="footer-desc fs-6">Comfortable and affordable guest house for your perfect stay.
                         Enjoy peaceful environment and modern facilities.</p>
                     <div class="d-flex align-items-center gap-2">
                         <div class="footer-icon"><i class="fa-brands fa-facebook-f"></i></div>
@@ -648,11 +604,11 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#tour">Tourist Places</a></li>
-                        <li><a href="#facilities">Facilities</a></li>
                         <li><a href="#rooms-stays">Rooms &amp; Stays</a></li>
+                        <li><a href="#tour">Tourist Places</a></li>
                         <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#info">Informations</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#info">Information</a></li>
                         <li><a href="#local-highlights">Discover Nilakottai</a></li>
                     </ul>
                 </div>
@@ -662,7 +618,7 @@
                         <li><i class="bi bi-check"></i> Free WiFi</li>
                         <li><i class="bi bi-check"></i> AC Rooms</li>
                         <li><i class="bi bi-check"></i> 24/7 Water Supply</li>
-                        <li><i class="bi bi-check"></i> Hot Water</li>
+                        <li><i class="bi bi-check"></i> Power Backup</li>
                         <li><i class="bi bi-check"></i> Car Parking</li>
                         <li><i class="bi bi-check"></i> Family Friendly</li>
                         <li><i class="bi bi-check"></i> LCD Screen</li>
@@ -677,12 +633,12 @@
                         <li><i class="bi bi-geo-alt-fill"></i> 
                             Kings Inn <br>
                             Plot No. 23, Maga City, <br>
-                            Nilakottai â€“ 624208, <br>
+                            Nilakottai - 624208, <br>
                             Dindigul District, <br>
                             Tamil Nadu, India
                         </li>
                         <li><i class="bi bi-telephone-fill"></i> <a href="tel:+918095877744">+91 80958 77744</a></li>
-                        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:infokingsinn@gmail.co">infokingsinn@gmail.co</a></li>
+                        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:infokingsinn@gmail.co">infokingsinn@gmail.com</a></li>
                         <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/918095877711" target="_blank" rel="noopener noreferrer">+91 80958 77711</a></li>
                     </ul>
                 </div>
