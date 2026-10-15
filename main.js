@@ -39,6 +39,16 @@ window.addEventListener("scroll", () => {
 });
 
 const navigationLinks = Array.from(document.querySelectorAll("#mainNavigation .nav-link"));
+const mainNavigation = document.getElementById("mainNavigation");
+
+navigationLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 1199.98px)").matches && mainNavigation?.classList.contains("show")) {
+            bootstrap.Collapse.getOrCreateInstance(mainNavigation).hide();
+        }
+    });
+});
+
 const navigationSections = navigationLinks
     .map(link => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);

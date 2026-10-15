@@ -268,15 +268,21 @@ html {
 }
 
 @media (max-width: 1199.98px) {
+    .navbar-bg .navbar-collapse.collapsing {
+        transition: height 0.15s ease;
+    }
+
     .navbar-bg .navbar-collapse {
         max-height: calc(100dvh - 100px);
         overflow-y: auto;
+        scrollbar-width: none;
         margin-top: 0.75rem;
         padding: 0.8rem 1rem 1rem;
         border: 1px solid rgba(255, 255, 255, 0.14);
         border-radius: 16px;
         background: rgba(14, 33, 22, 0.97);
     }
+    .navbar-bg .navbar-collapse::-webkit-scrollbar { display: none; }
     .navbar-bg .navbar-nav { gap: 0; }
     .navbar-bg .nav-link {
         display: inline-block;
