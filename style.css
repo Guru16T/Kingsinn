@@ -300,11 +300,12 @@ html {
 
 #home,
 #gallery,
+#rooms-stays,
 #info,
 #facilities,
 #local-highlights,
 #tour {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 120px;
 }
 
 /* About */
@@ -1713,6 +1714,9 @@ body.no-scroll {
     .booking-fields-layout {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.8fr) minmax(175px, 0.85fr);
     }
+    #about {
+        scroll-margin-top: 50px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1885,7 +1889,6 @@ body.no-scroll {
 .local-highlights-section {
     position: relative;
     overflow: hidden;
-    padding: clamp(4.5rem, 2vw, 7.5rem) 0;
     color: var(--heading-color);
 }
 
@@ -2000,7 +2003,6 @@ body.no-scroll {
 
 .info-section {
     position: relative;
-    padding: clamp(4.5rem, 2vw, 7.5rem) 0 2rem;
 }
 
 .info-heading {
@@ -2411,10 +2413,6 @@ body.no-scroll {
 @media (max-width: 575.98px) {
     .local-highlights-grid { grid-template-columns: 1fr; }
     .local-highlight-airport { grid-column: auto; }
-}
-
-.facility-section {
-    padding: clamp(3.5rem, 7vw, 6rem) 0 !important;
 }
 
 .facility-layout {
